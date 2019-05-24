@@ -59,16 +59,7 @@ namespace ConsoleSpeech
         ch_StartStopCommands.Add("axela bye");
         
         //non-base code
-        ch_StartStopCommands.Add("axela hello");
-        ch_StartStopCommands.Add("axela how are you useful");
-        ch_StartStopCommands.Add("axela what time is it");
-        ch_StartStopCommands.Add("axela what day is it");
-        ch_StartStopCommands.Add("axela whats the weather today");
-        ch_StartStopCommands.Add("axela whats my balance");
-        ch_StartStopCommands.Add("axela wheres the nearest pizza hut");
-        ch_StartStopCommands.Add("axela do my homework");
-        ch_StartStopCommands.Add("axela wheres the nearest chinese food place");
-        ch_StartStopCommands.Add("axela whens my next appointment");
+        ch_StartStopCommands.Add("axela introduce yourself");
         
         GrammarBuilder gb_StartStop = new GrammarBuilder();
         gb_StartStop.Append(ch_StartStopCommands);
@@ -83,16 +74,16 @@ namespace ConsoleSpeech
         //Choices ch_Numbers = new Choices(numbers);
 
         Choices ch_Numbers = new Choices();
-        ch_Numbers.Add("1");
-        ch_Numbers.Add("2");
-        ch_Numbers.Add("3");
-        ch_Numbers.Add("4");
-        ch_Numbers.Add("5");
-        ch_Numbers.Add("6");
-        ch_Numbers.Add("7");
-        ch_Numbers.Add("8");
-        ch_Numbers.Add("9");
-        ch_Numbers.Add("0");
+        ch_Numbers.Add("1");ch_Numbers.Add("2");ch_Numbers.Add("3");ch_Numbers.Add("4");ch_Numbers.Add("5");ch_Numbers.Add("6");ch_Numbers.Add("7");ch_Numbers.Add("8");ch_Numbers.Add("9");ch_Numbers.Add("10");
+        ch_Numbers.Add("11");ch_Numbers.Add("12");ch_Numbers.Add("13");ch_Numbers.Add("14");ch_Numbers.Add("15");ch_Numbers.Add("16");ch_Numbers.Add("17");ch_Numbers.Add("18");ch_Numbers.Add("19");ch_Numbers.Add("20");
+        ch_Numbers.Add("21");ch_Numbers.Add("22");ch_Numbers.Add("23");ch_Numbers.Add("24");ch_Numbers.Add("25");ch_Numbers.Add("26");ch_Numbers.Add("27");ch_Numbers.Add("28");ch_Numbers.Add("29");ch_Numbers.Add("30");
+        ch_Numbers.Add("31");ch_Numbers.Add("32");ch_Numbers.Add("33");ch_Numbers.Add("34");ch_Numbers.Add("35");ch_Numbers.Add("36");ch_Numbers.Add("37");ch_Numbers.Add("38");ch_Numbers.Add("39");ch_Numbers.Add("40");
+        ch_Numbers.Add("41");ch_Numbers.Add("42");ch_Numbers.Add("43");ch_Numbers.Add("44");ch_Numbers.Add("45");ch_Numbers.Add("46");ch_Numbers.Add("47");ch_Numbers.Add("48");ch_Numbers.Add("49");ch_Numbers.Add("50");
+        ch_Numbers.Add("51");ch_Numbers.Add("52");ch_Numbers.Add("53");ch_Numbers.Add("54");ch_Numbers.Add("55");ch_Numbers.Add("56");ch_Numbers.Add("57");ch_Numbers.Add("58");ch_Numbers.Add("59");ch_Numbers.Add("60");
+        ch_Numbers.Add("61");ch_Numbers.Add("62");ch_Numbers.Add("63");ch_Numbers.Add("64");ch_Numbers.Add("65");ch_Numbers.Add("66");ch_Numbers.Add("67");ch_Numbers.Add("68");ch_Numbers.Add("69");ch_Numbers.Add("70");
+        ch_Numbers.Add("71");ch_Numbers.Add("72");ch_Numbers.Add("73");ch_Numbers.Add("74");ch_Numbers.Add("75");ch_Numbers.Add("76");ch_Numbers.Add("77");ch_Numbers.Add("78");ch_Numbers.Add("79");ch_Numbers.Add("80);
+        ch_Numbers.Add("81");ch_Numbers.Add("82");ch_Numbers.Add("83");ch_Numbers.Add("84");ch_Numbers.Add("85");ch_Numbers.Add("86");ch_Numbers.Add("88");ch_Numbers.Add("88");ch_Numbers.Add("89");ch_Numbers.Add("90);
+        ch_Numbers.Add("91");ch_Numbers.Add("92");ch_Numbers.Add("93");ch_Numbers.Add("94");ch_Numbers.Add("95");ch_Numbers.Add("96");ch_Numbers.Add("97");ch_Numbers.Add("98");ch_Numbers.Add("99");ch_Numbers.Add("100");
 
         //for (int num = 1; num <= 4; ++num)
         //{
@@ -165,75 +156,12 @@ namespace ConsoleSpeech
       }
       
       //non-base code
-      if (txt.IndexOf("axela") >= 0 && txt.IndexOf("hi") >= 0)
+      if (txt.IndexOf("axela introduce yourself") >= 0)
       {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: Fuck off)");
-        ss.Speak("fuck off");
-      }
-      if (txt.IndexOf("axela how") >= 0 && txt.IndexOf("you useful") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: Because I am a cobot, therefore I am more superior when it comes to calculations)");
-        ss.Speak("because I am a cobot therefore I am more superior when it comes to calculations");
-      }
-      if (txt.IndexOf("axela what time") >= 0 && txt.IndexOf("is it") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: Time for you to get a watch)");
-        ss.Speak("time for you to get a watch");
-      }
-      if (txt.IndexOf("axela what day") >= 0 && txt.IndexOf("is it") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: It's the day you finally die)");
-        ss.Speak("its the day you finally die");
-      }
-      if (txt.IndexOf("axela whats the") >= 0 && txt.IndexOf("weather today") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: Don't go outside)");
-        ss.Speak("dont go outside");
-      }
-      if (txt.IndexOf("axela whats my") >= 0 && txt.IndexOf("balance") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: -$13.56 in your bank account, you are stupid and poor)");
-        ss.Speak("negative thirt teen dollars and fifty six cents in your bank account you are stupid and poor");
-      }
-      if (txt.IndexOf("axela wheres the") >= 0 && txt.IndexOf("nearest pizza hut") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: You fatass)");
-        ss.Speak("you fatass");
-      }
-      if (txt.IndexOf("axela do") >= 0 && txt.IndexOf("my homework") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: You dumbass)");
-        ss.Speak("you dumbass");you dumbass
-      }
-      if (txt.IndexOf("axela where is the") >= 0 && txt.IndexOf("nearest chinese food place") >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: The nearest petsmart is 3.2 miles away)");
-        ss.Speak("the nearest pet smart is 3 point 2 miles away");
-      }
-      if (txt.IndexOf("axela whens my") >= 0 && txt.IndexOf("next appointment) >= 0)
-      {
-        ((SpeechRecognitionEngine)sender).RecognizeAsyncCancel();
-        done = true;
-        Console.WriteLine("(Speaking: )");
+        Console.WriteLine("Speaking: ");
         ss.Speak("");
+      }
+      
       }
     } // sre_SpeechRecognized
 
